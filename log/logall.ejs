@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Регистрация</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style_reg.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css">
+
+</head>
+<body>
+	<div class="all_content">
+		<header class="header">
+          <div class="container">
+            <div class="row">
+              <div class="col-10">
+                <div class="logotip">
+                  <img src="images/messenger.png" alt="123">
+                  <h4 class="logo">Мессенджер</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+
+    <main>
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-2"></div>
+    			<div class="col-6">
+    				<div class="text-center mobile_text">
+    					<h4 class="for_mobile">ВКонтакте для мобильных устройств</h4>
+    					<p class="official">Установите официальное мобильное приложение ВКонтакте и оставайтесь в курсе новостей ваших друзей, где бы вы ни находились.</p>
+    				</div>
+    				<div class="phones text-center">
+    					<img src="images/first_phone.png" alt="phone" class="first_phone">
+    					<img src="images/second_image.png" alt="phone" class="second_image">
+    				</div>
+    				<div class="mobile_links">
+    					<div class="two_links text-center">
+    						<a href="https://play.google.com/store/apps/details?id=com.vkontakte.android" class="first"><img src="images/android.png" alt=""> VK для Android</a>
+    						<a href="https://apps.apple.com/ru/app/id564177498"><img src="images/apple.png" alt=""> VK для IOS</a>
+    					</div>
+    					<div class="last text-center">
+    						<a href="https://vk.com/products">Все продукты</a>
+    					</div>
+    				</div>
+    			</div>
+    			<div class="col-1"></div>
+    			<div class="col-3">
+                    <% if(error) {%>
+                        <p class="text-center but_reglog" style="width: 250px; background-color: #e52b50; margin: 0 auto; margin-right: 36px; margin-bottom: 20px; padding-top: 5px; padding-bottom: 7px; opacity: .9;"><%= error %></p>
+                    <% } %>
+    				<div class="logi">
+    					<form action="/login" method="POST" class="form_aut">
+                            <div class="aut">
+                                <input type="text" name="login" class="log_in_reg" placeholder="Логин">
+                                <input type="password" name="password_log" class="pass_in_reg" placeholder="Пароль">
+                                <button type="submit" name="do_login_log" class="log but_reglog but_in_reg" style="height: 36px;">
+                                    <span style="height: 36px;">
+                                        <span>Войти</span>
+                                    </span>
+                                </button>
+                            </div>
+    					</form>
+    				</div>
+    				<div class="reg text-center">
+    					<h3>Впервые здесь?</h3>
+    					<h4>Моментальная регистрация</h4>
+    					<form action="/logup" method="POST" class="form_aut">
+                            <div class="registr">
+                                <input type="text" name="userName" class="log_in_reg" placeholder="Логин">
+                                <input type="password" name="password" class="pass_in_reg" placeholder="Пароль">
+                                <button type="submit" name="do_signup" class="but_reglog but_in_reg some_reg" style="height: 36px;">
+                                    <span style="height: 36px;">
+                                        <span>Продолжить регистрацию</span>
+                                    </span>
+                                </button>
+                                
+                            </div>
+    						
+    					</form>
+    				</div>
+    			</div>
+    			
+    		</div>
+    	</div>
+    </main>
+	</div>
+</body>
+</html>

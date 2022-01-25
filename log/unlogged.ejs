@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css">
+	<title>Вход/Регистрация</title>
+</head>
+<body>
+<div class="all_content">
+            <header class="header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="logotip">
+                                <img src="images/messenger.png" alt="123">
+                                <h4 class="logo">Мессенджер</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <div class="main_content main_dop">
+                    <div class="container">
+                        <div class="log-in">
+                            <div class="text-center enter">
+                                <h4>Вход в мэссенджер</h4>
+                            </div>
+                            <div class="view">
+                                <p>Чтобы просматривать эту страницу, нужно зайти на сайт.</p>
+                            </div>
+                            <% if(error) {%>
+                            <div class="view" style="padding-left: 0; background-color: #e52b50; opacity: .9; color: #fff;">
+                                <p class="text-center"><%= error %></p>
+                            </div>
+                            <%}%>
+                            <form action="/login" id="mess-form" method="POST">
+                                <div class="form">
+                                    <input type="text" name="login" id="login" placeholder="Логин"  class="form-control log_but">
+                                    <br>
+                                    <input name="password_log" id="password" type="password" class="form-control log_but mb-4" placeholder="Пароль">
+                                    <div class="login_and_reg">
+                                        <button type="submit" name="do_login" class="log but_reglog" style="height: 36px;">
+                                        <span style="height: 36px;"><span>Войти</span></span>
+                                        </button>
+                                        <a href="/logall" class="reg_link reg but_reglog">
+                                            <div class="text-center some_div">
+                                                <span>Регистрация</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <script>
+            // document.ready(function() {
+
+            // })
+        </script>
+</body>
+</html>

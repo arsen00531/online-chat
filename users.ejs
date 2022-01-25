@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Чаты</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/chat.css">
+	<link rel="stylesheet" href="../css/style.css">
+  	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="all_content">
+		<header class="header" style="position: fixed;top: 0; left: 0; width: 100%;">
+            <div class="container">
+                <div class="row header_chat">
+                    <div class="col-8">
+                        <div class="logotip">
+                            <img src="../images/messenger.png" alt="123">
+                            <h4 class="logo">Мессенджер</h4>
+                        </div>
+                        
+                    </div>
+                    <div class="col-1"></div>
+                    <div class="col-3 user">
+                        <div class="all_info">
+                            <a class="account_not_log">
+                                <p class="pska2"><%= name %> <img src="../images/down_arrow.png" alt="" class="arrow">
+                                    <div class="reg_and_log">
+                                <div class="nick">
+                                    <p class="text-center"><a href="/profile?login=<%= name %>" style="text-decoration: none; color: #000;"><%= name %></a></p>
+                                </div>
+                                <hr>
+                                <div class="set_and_help">
+                                    <div style="">
+                                        
+                                    </div>
+                                    <p><a href="/" style="text-decoration: none; color: #000;">Главная</a></p>
+                                    <p><a href="/logout" style="text-decoration: none; color: #000;">Выйти</a></p>
+                                </div>
+                            </div></p>
+                            </a>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+        	<div class="container">
+        		<div class="row">
+        			<div class="users">
+        				<div class="flex" style="display: flex;">
+        					<% for(var i=0; i<row.length;i++) {%>
+                                <div class="user_div">
+                                        <a href="/profile?login=<%= row[i].login %>"><img src="../user_images/<%= row[i].image %>" class="user_img" alt="image"></a>
+                                        <div class="div_flex">
+                                            <a href='/profile?login=<%= row[i].login %>&img=<%= row[i].image %>' class='link'>
+                                                <p class='user_p'><%= row[i].login %></p>
+                                            </a>
+                                            <a href='/log?id=<%= row[i].login %>' class='user_link'>
+                                                <img src='../images/message.png'>
+                                            </a>
+                                        </div>
+                                </div>
+                            <%} %>
+        				</div>
+        			</div>
+        		</div>
+        	</div>
+        </main>
+	</div>
+	
+
+    <script>
+        $(document).ready(function () {
+            $(".account_not_log").on("click", function (e) {
+                e.preventDefault()
+                var reg_and_log = $(".reg_and_log")
+                reg_and_log.toggleClass("clicked")
+            })
+            var users = $(".user_div");
+            if(users.length == 2) {
+            	$(".users").css("cssText", "max-width: 455px !important;")
+            }
+            if(users.length == 1) {
+            	$(".users").css("cssText", "max-width: 240px !important;")
+            }
+        })
+    </script>
+</body>
+</html>

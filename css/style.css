@@ -1,0 +1,632 @@
+body, html {
+	width: 100%;
+	height: 100%;
+	background-color: #EDEEF0;
+}
+
+header .container .row>* {
+	height: 30px;
+}
+.grow {
+	position: fixed;
+	width: 34%;
+	height: 42px;
+	z-index: 25; 
+	background-color: #fff; 
+	top: 60px; 
+	left: 33%;
+}
+.some_text {
+	position: fixed; 
+	width: 34%; 
+	height: 18px; 
+	z-index: 25; 
+	background-color: #EDEEF0; 
+	top: 42px; 
+	left: 33%;
+}
+.all_content {
+	background-color: #EDEEF0;
+	height: 100%;
+}
+.logotip {
+	display: flex;
+}
+.logo {
+	font-size: 21px;
+	font-weight: bold;
+	margin: auto 0;
+	margin-left: 10px;
+}
+.header {
+	background-color: #fff;
+	box-shadow: 0 0 0.7px 0;
+	padding-top: 4px;
+	height: 42px;
+	position: relative;
+	z-index: 50;
+}
+.user {
+	font-size: 20px;
+}
+.main_content {
+	width: 100%;
+	height: 100%;
+}
+.main_content .container {
+	height: 100%;
+}
+.the_massanger {
+	box-shadow: 0 0 0.7px 0;
+	background-color: #fff;
+	margin-top: 20px !important;
+	width: 34%;
+	margin: 0 auto;
+	height: 90vh;
+	position: fixed;
+	top: 40px;
+	left: 33%;
+}
+.header_massanger {
+	box-shadow: 0 0 0.7px 0;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	background-color: #fff;
+	position: relative;
+	z-index: 22;
+}
+.messages {
+	position: relative;
+	width: 34%;
+	left: 33%;
+	bottom: 90%;
+	z-index: 20;
+}
+#message {
+	width: 88%;
+	margin: 0 auto;
+}
+.send_mess {
+	outline: none;
+	border: 0;
+	border-radius: 6px;
+	border: solid 1px #d3d9de;
+	padding: 9px 74px 10px 13px;
+}
+.submit {
+	outline: none;
+	border: 0;
+	position: relative;
+	top: 3px;
+	right: 7px;
+	height: 30px;
+	transform: scale(0);
+	background-color: #fff;
+}
+.send_ico {
+	position: absolute;
+	top: 3px;
+	left: -12px;
+	background-color: #fff;
+}
+.account_not_log {
+	color: #000;
+	text-decoration: none;
+	width: 100%;
+}
+.all_info {
+	position: relative;
+	top: 3px;
+	right: 10px;
+	width: 100% !important;
+}
+.pska2 {
+	width: 100%;
+	cursor: pointer;
+}
+.reg_and_log {
+	background-color: #fff;
+	box-shadow: 0 0 0.7px 0;
+	position: relative;
+	z-index: 100;
+	right: 50%;
+	transition: all 0.3s ease;
+	transform: scale(0);
+	padding: 3px 5px;
+	width: 200px;
+}
+.reg_and_log.clicked {
+	transform: scale(1.0);
+	display: block;
+	transition: all 0.3s ease;
+}
+.the_link {
+	color: #000;
+	text-decoration: none;
+	font-size: 15px;
+}
+.into_form {
+	display: flex;
+	position: fixed;
+	bottom: 20px;
+	right: 33%;
+	width: 34%;
+}
+.all_mess {
+	position: relative;
+	width: 88%;
+	left: 40px;
+	top: 85%;
+}
+.user_mess {
+	text-decoration: none;
+	font-weight: bold;
+	position: relative;
+}
+.some_p {
+	position: relative;
+}
+.user_img {
+	max-width: 200px;
+	height: 200px;
+}
+
+.log-in {
+	width: 60%;
+	margin: 0 auto;
+	padding: 40px;
+	margin-top: 5%;
+	background-color: #fff;
+	box-shadow: 0 0 0.7px 0;
+}
+.view {
+	background-color: #F0F2F5;
+	font-size: 14px;
+	width: 80%;
+	margin: 0 auto;
+	border: 2px solid #C5D0DB;
+	padding-top: 10px;
+	padding-left: 20px;
+	margin-bottom: 30px;
+}
+.enter {
+	margin-bottom: 30px;
+}
+.form {
+	width: 47%;
+	margin: 0 auto;
+}
+.log_but {
+	width: 70%;
+}
+.login_and_reg {
+	display: flex;
+	width: 100%;
+}
+.but_reglog {
+	outline: none;
+	border: 0;
+	border-radius: 4px;
+	padding: 0 46px;
+	color: white;
+	font-family: inherit;
+	font-size: 14px;
+	width: 100%;
+}
+.log {
+	background-color: #5181B8;
+}
+.reg {
+	margin-left: 10px;
+	background-color: #4BB34B;
+}
+.reg_link {
+	text-decoration: none;
+	color: #fff;
+}
+.some_div {
+	margin-top: 6px;
+}
+.reg_link:hover {
+	color: #fff;
+}
+.some_botton {
+	position: fixed; 
+	width: 34%; 
+	height: 46px; 
+	z-index: 25; 
+	background-color: #EDEEF0; 
+	left: 33%; 
+	bottom: -14px;
+}
+.some_botton2 {
+	position: fixed; 
+	width: 34%; 
+	height: 18px; 
+	z-index: 25; 
+	background-color: #fff; 
+	left: 33%; 
+	bottom: 26px;
+}
+
+
+@media (max-width: 1670px) {
+	.reg_and_log {
+		right: 51%
+	}
+}
+@media (max-width: 1355px) {
+	.reg_and_log {
+		right: 60%
+	}
+	.the_massanger {
+		width: 44%;
+		left: 28%
+	}
+	.into_form {
+		width: 44%;
+		right: 28%
+	}
+	.all_mess {
+		width: 88%;
+		left: 0;
+		top: 85%;
+	}
+	.grow {
+		width: 44%;
+		left: 28%;
+	}
+	.some_text {
+		width: 44%;
+		left: 28%;
+	}
+	.some_botton {
+		width: 44%;
+		left: 28%;
+	}
+	.some_botton2 {
+		width: 44%;
+		left: 28%;
+	}
+}
+@media(max-width: 1399px) {
+	.form {
+		width: 55%;
+		margin: 0 auto;
+	}
+	.users {
+		margin-top: 5%
+	}
+}
+@media (max-width: 1199px) {
+	.reg_and_log {
+		right: 76%
+	}
+	.form {
+		width: 64%;
+		margin: 0 auto;
+	}
+	.users {
+		margin-top: 6% !important;
+	}
+}
+@media (max-width: 991px) {
+	.reg_and_log {
+		right: 98%
+	}
+	.form {
+		width: 75%;
+		margin: 0 auto;
+	}
+	.log-in {
+		width: 85%;
+		margin: 0 auto;
+		margin-top: 5%;
+		background-color: #fff;
+		box-shadow: 0 0 0.7px 0;
+		padding: 40px;
+	}
+	.the_massanger {
+		width: 54%;
+		left: 23%
+	}
+	.into_form {
+		width: 54%;
+		right: 23%
+	}
+	.grow {
+		width: 54%;
+		left: 23%;
+	}
+	.some_text {
+		width: 54%;
+		left: 23%;
+	}
+	.some_botton {
+		width: 54%;
+		left: 23%;
+	}
+	.some_botton2 {
+		width: 54%;
+		left: 23%;
+	}
+	.users {
+		margin: auto;
+		margin-top: 10% !important;
+	}
+}
+@media (max-width: 767px) {
+	.users {
+		max-width: 456px !important;
+	}
+	.reg_and_log {
+		right: 120%
+	}
+	.login_and_reg {
+		width: 100%;
+	}
+	.but_reglog {
+		outline: none;
+		border: 0;
+		border-radius: 6px;
+		padding: 0 46px;
+		color: white;
+		font-family: inherit;
+		font-size: 14px;
+		width: 100%;
+		margin-bottom: 20px
+	}
+	.form {
+		width: 100%;
+		margin: 0 auto;
+	}
+	.the_massanger {
+		width: 70%;
+		left: 15%
+	}
+	.into_form {
+		width: 70%;
+		right: 15%
+	}
+	.grow {
+		width: 70%;
+		left: 15%;
+	}
+	.some_text {
+		width: 70%;
+		left: 15%;
+	}
+	.some_botton {
+		width: 70%;
+		left: 15%;
+	}
+	.some_botton2 {
+		width: 70%;
+		left: 15%;
+	}
+	.all_mess {
+		width: 88%;
+		left: -80px;
+		top: 85%;
+	}
+}
+@media (max-width: 630px) {
+	.reg_and_log {
+		right: 130%
+	}
+}
+@media (max-width: 574px) {
+	.form {
+		width: 85%;
+		margin: 0 auto;
+	}
+	.view {
+		width: 100%;
+	}
+	.users {
+		margin-top: 9% !important; 
+		background-color: #fff; 
+		max-width: 97% !important;
+	}
+}
+@media (max-width: 530px) {
+	::-webkit-input-placeholder {
+		font-size: 13px
+	}
+	.send_mess {
+		width: 80% !important;
+	}
+	.reg_and_log {
+		right: 135%
+	}
+	.header .col-3 {
+		padding: 0 !important;
+		width: 25% !important;
+	}
+	.header .col-3 {
+		padding: 0 !important;
+		width: 25% !important
+	}
+	.pska2 {
+		position: relative;
+		right: 21px
+	}
+	.all_mess {
+		width: 88%;
+		left: -50px;
+		top: 85%;
+	}
+}
+@media (max-width: 460px) {
+	.log-in {
+		width: 92%;
+	}
+	.form {
+		width: 95%;
+		margin: 0 auto;
+	}
+	.login_and_reg {
+		display: flex;
+		flex-wrap: wrap;
+		width: 70%;
+		margin: 0 auto; 
+	}
+	.reg {
+		margin: 0;
+		margin-top: 20px
+	}
+	.some_div {
+		height: 30px;
+	}
+	.log {
+		margin-bottom: 0
+	}
+	.the_massanger {
+		width: 86%;
+		left: 7%
+	}
+	.into_form {
+		width: 85%;
+		right: 7%
+	}
+	.grow {
+		width: 86%;
+		left: 7%;
+	}
+	.some_text {
+		width: 86%;
+		left: 7%;
+	}
+	.some_botton {
+		width: 86%;
+		left: 7%;
+	}
+	.some_botton2 {
+		width: 86%;
+		left: 7%;
+	}
+	.users {
+		margin: auto;
+		margin-top: 10% !important;
+	}
+}
+@media (max-width: 400px) {
+	.reg_and_log {
+		right: 200%
+	}
+	.header .col-3 {
+		padding: 0 !important;
+		width: 25% !important
+	}
+	.users {
+		margin: auto;
+		margin-top: 10% !important;
+		max-width: 241px !important;
+	}
+	.user_div {
+		margin-left: 0
+	}
+}
+@media (max-width: 382px) {
+	.users {
+		margin-top: 14% !important; 
+		background-color: #fff; 
+		max-width: 85% !important;
+	}
+	.flex {
+		justify-content: center !important;
+		margin-left: 0
+	}
+}
+@media (max-width: 352px) {
+	.some_div {
+		position: relative;
+		right: 10px
+	}
+	.reg_and_log {
+		right: 175%
+	}
+	.user {
+		padding: 0 !important;
+	}
+	.the_massanger {
+		width: 96%;
+		left: 2%
+	}
+	.into_form {
+		width: 96%;
+		right: 2%
+	}
+	.grow {
+		width: 96%;
+		left: 2%;
+	}
+	.some_text {
+		width: 96%;
+		left: 2%;
+	}
+	.some_botton {
+		width: 96%;
+		left: 2%;
+	}
+	.some_botton2 {
+		width: 96%;
+		left: 2%;
+	}
+}
+@media (max-width: 330px) {
+	.some_div {
+		position: relative;
+		right: 20px
+	}
+}
+@media (max-height: 970px) {
+	.messages {
+		bottom: 88%;
+	}
+}
+@media (max-height: 850px) {
+	.messages {
+		bottom: 87%;
+	}
+}
+@media (max-height: 770px) {
+	.messages {
+		bottom: 85%;
+	}
+}
+@media (max-height: 680px) {
+	.messages {
+		bottom: 83%;
+	}
+}
+@media (max-height: 580px) {
+	.messages {
+		bottom: 81%;
+	}
+}
+@media (max-height: 520px) {
+	.messages {
+		bottom: 79%;
+	}
+}
+@media (max-height: 460px) {
+	.messages {
+		bottom: 76%;
+	}
+}
+@media (max-height: 420px) {
+	.messages {
+		bottom: 74%;
+	}
+}
+@media (max-height: 380px) {
+	.messages {
+		bottom: 71%;
+	}
+}
+@media (max-height: 340px) {
+	.messages {
+		bottom: 68%;
+	}
+}

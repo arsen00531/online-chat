@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css">
+    <title>Мессенджер</title>
+</head>
+<body>
+    <div class="some_text"></div>
+    <div class="grow">
+        <div class="header_massanger">
+            <h5 class="text-center">Massanger</h5>
+        </div>
+    </div>
+    <div class="all_content">
+        <header class="header" style="position: fixed;top: 0; left: 0; width: 100%;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-8">
+                        <div class="logotip">
+                            <img src="images/messenger.png" alt="123">
+                            <h4 class="logo">Мессенджер</h4>
+                        </div>
+                        
+                    </div>
+                    <div class="col-1"></div>
+                    <div class="col-3 user" style="position: relative; z-index: 0;">
+                        <div class="all_info">
+                            <a class="account_not_log">
+                                <p class="pska2"><%= my_name %> <img src="images/down_arrow.png" alt="" class="arrow">
+                                    <div class="reg_and_log" style="position: relative; z-index: 200;">
+                                <div class="nick">
+                                    <p class="text-center"><a href="/profile?login=<%= my_name %>" style="text-decoration: none; color: #000;"><%= my_name %></a></p>
+                                </div>
+                                <hr>
+                                <div class="set_and_help">
+                                    
+                                    <p><a href="/users" style="z-index: 101; text-decoration: none; color: #000;">Чаты</a></p>
+                                    <p><a href="/logout" style="text-decoration: none; color: #000;">Выйти</a></p>
+                                </div>
+                            </div></p>
+                            </a>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+
+        <main>
+            <div class="main_content">
+                <div class="container">
+                    <div class="the_massanger">
+                        
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <div class="messages">             
+            <div class="all_mess">
+                <% for(var i=0; i<row.length;i++) {%>
+                    <a class="user_mess" href="/profile?login=<%= row[i].name %>"><%= row[i].name %></a>
+                    <p class="some_p"><%= row[i].text %></p>
+                <%} %>
+              <div style="width: 100%; height: 100px;" class="some">
+                  
+              </div>
+            </div>
+            <form id="mess-form">
+                <div class="into_form">
+                    <input type="text" name="message" id="message" class="mb-4 send_mess" placeholder="Напишите сообщение..." style="font-size: 15px;">
+                    <button type="submit" class="submit" name="do"><img src="images/icon.png" alt="send_ico" class="send_ico"></button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="some_botton"></div>
+    <div class="some_botton2"></div>
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <script>
+        $(function () {
+            var wind = $(document).height()
+            window.scrollTo(0 , wind)
+
+            var socket = io.connect();
+            var $form = $('#mess-form');
+            var $textarea = $('#message');
+            var $all_messages = $('.all_mess');
+            var $input = $(".btn");
+            var $under__name = $(".under_name");
+            var $under__textarea = $(".under_textarea");
+            var log = $(".name")
+            var cookies = document.cookie.split(";");
+
+            var login = "<%= my_name %>"
+
+            $('textarea').on('keydown', function( el ) {
+              if( el.keyCode === 13 ) {
+
+                if($textarea.val() === "") $under__textarea.text("Введите сообщение");
+
+                else $under__textarea.text('');
+
+                el.preventDefault();
+              }
+            });
+
+            document.addEventListener("keyup", function (e) {
+              e.preventDefault();
+
+              if(login === "" || $textarea.val() === "") return;
+
+              if(e.keyCode === 13) {
+                e.preventDefault();
+                socket.emit('send mess', {mess: $textarea.val(), name: login});
+                $textarea.val('');
+              }
+            });
+
+            var text = document.getElementById('message');
+            text.addEventListener('keyup', function(e) {
+                var message = $("#message").val()
+                var submit = document.querySelector(".submit")
+                if(message == "") {
+                    submit.style.transform = "scale(0)"
+                    submit.style.transition = "all 0.3s"
+                }
+                else {
+                    submit.style.transform = "scale(1)"
+                }
+            })
+
+            text.addEventListener('keydown', function(e) {
+                var message = $("#message").val()
+                var submit = document.querySelector(".submit")
+                if(message == "") {
+                    submit.style.transform = "scale(0)"
+                    submit.style.transition = "all 0.3s"
+                }
+                else {
+                    submit.style.transform = "scale(1)"
+                }
+            })
+
+            $(".account_not_log").on("click", function (e) {
+                e.preventDefault()
+                var reg_and_log = $(".reg_and_log")
+                reg_and_log.toggleClass("clicked")
+            })
+
+            $form.submit(function (event) {
+              event.preventDefault();
+
+              if($textarea.val() === "") $under__textarea.text("Введите сообщение");
+
+              else $under__textarea.text('');
+
+              if(login === "" || $textarea.val() === "") return;
+
+              socket.emit('send mess', {mess: $textarea.val(), name: login});
+              $textarea.val('');        
+            });
+
+            socket.on('add mess', function (data) {
+                var some = $(".some")
+                some.before("<a class='user_mess'>"+ data.name +"</a>");
+                some.before("<p class='some_p'>"+ data.mess +"<p>")
+                var wind = $(document).height()
+                window.scrollTo(0 , wind)
+            });
+          });
+
+      </script>
+</body>
+</html>

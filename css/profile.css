@@ -1,0 +1,240 @@
+body {
+	height: 80% !important;
+}
+
+header .container .row>* {
+	height: 30px;
+}
+main {
+	margin-top: 5%;
+}
+.next_back {
+	margin-top: 40px; 
+	position: absolute; 
+	left: 0;
+	top: 0; 
+	z-index: 151; 
+	width: 50%; 
+	background-color: #fff; 
+	left: 25%; 
+	border-radius:4px; 
+	top: 30%; 
+	display: none;
+}
+.with_img {
+	width: 20%;
+	background-color: #fff;
+	padding: 15px 15px 6px 15px;
+}
+.image {
+	margin-bottom: 5px;
+	max-width: 200px;
+	max-height: 220px;
+	margin: auto;
+}
+.settings {
+	text-decoration: none;
+	padding: 7px 51px;
+	border-radius: 4px;
+	background-color: #e5ebf1;
+	width: 100%;
+	color: #55677d;
+}
+.main {
+	background-color: #fff;
+	margin-left: 20px;
+	padding: 15px 20px;
+}
+.main h1 {
+	font-size: 20px;
+	text-transform: capitalize;
+}
+.some_flex {
+	display: flex;
+	justify-content: space-between;
+}
+.span {
+	color: #55677d;
+}
+.main p {
+	margin-bottom: 10px;
+}
+.set_and_help p, div {
+	margin-bottom: 10px;
+}
+.user_img {
+	cursor: pointer;
+	width: 100%;
+}
+.next_back {
+	margin: 0 auto;
+}
+.h1 {
+	padding: 19px 10px 18px 10px;
+	font-size: 16px;
+}
+.file {
+	padding: 20px 25px;
+}
+.send1 {
+	margin: 20px auto;
+}
+.button {
+	outline: none;
+	border-radius: 4px;
+	background-color: #5181b8;
+	border: 0;
+	color: #fff;
+	font-size: 15px;
+	opacity: 0;
+	position: absolute;
+	width: 20%;
+	right: 40%;
+	cursor: pointer;
+	height: 30px;
+	z-index: 50;
+}
+.label {
+	width: 20%;
+	outline: none;
+	padding: 7px 16px 8px;
+	border-radius: 4px;
+	background-color: #5181b8;
+	border: 0;
+	color: #fff;
+	font-size: 15px;
+	cursor: pointer;
+	z-index: 1;
+}
+.button1 {
+	padding: 7px 16px 8px;
+	outline: none;
+	border-radius: 4px;
+	background-color: #5181b8;
+	border: 0;
+	color: #fff;
+	font-size: 15px;
+	margin-top: 20px;
+}
+.error {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 152;
+	width: 40%;
+	left: 30%;
+	top: 41%;
+	color: red;
+	display: none;
+}
+@media (max-width: 1230px) {
+	.button {
+		width: 26%;
+		right: 37%;
+	}
+	.label {
+		width: 26%;
+	}
+}
+@media (max-width: 1200px) {
+	.with_img {
+		width: 24%
+	}
+}
+@media (max-width: 991px) {
+	.with_img {
+		width: 100%
+	}
+	.m {
+		width: 100% !important;
+		background-color: #fff;
+	}
+}
+@media (max-width: 942px) {
+	.button {
+		width: 30%;
+		right: 35%;
+	}
+	.label {
+		width: 30%;
+	}
+	.next_back {
+		margin-top: 40px; 
+		width: 60%;
+		left: 20%;
+	}
+}
+@media (max-width: 812px) {
+	.button {
+		width: 36%;
+		right: 32%;
+	}
+	.label {
+		width: 36%;
+	}
+	.next_back {
+		margin-top: 40px; 
+		width: 70%;
+		left: 15%;
+	}
+}
+@media (max-width: 750px) {
+	.next_back {
+		margin-top: 40px; 
+		width: 80%;
+		left: 10%;
+	}
+}
+@media (max-width: 600px) {
+	.button {
+		width: 48%;
+		right: 24%;
+	}
+	.label {
+		width: 48%;
+	}
+	.next_back {
+		margin-top: 40px; 
+		width: 90%;
+		left: 5%;
+	}
+}
+@media (max-width: 500px) {
+	/*.button {
+		width: 58%;
+		right: 21%;
+	}
+	.label {
+		width: 58%;
+	}*/
+}
+@media (max-width: 424px) {
+	/*.button {
+		width: 70%;
+		right: 15%;
+	}
+	.label {
+		width: 70%;
+	}*/
+	.next_back {
+		margin-top: 40px; 
+		width: 98%;
+		left: 1%;
+	}
+	.file {
+		padding: 15px 10px;
+	}
+}
+@media (max-width: 360px) {
+	.button1 {
+		padding: 7px 25px 8px
+	}
+	.file {
+		line-height: 1.3
+	}
+}
+@media (max-width: 340px) {
+	.button1 {
+		padding: 7px 30px 8px
+	}
+}
